@@ -18,10 +18,22 @@ int solve(int *arr,int i){
 	return  dp[i] = min(op1,op2);
 }
 
+int bottomUp(int *arr,int n){
+	int dp[n];
+	dp[0] = 0;
+	dp[1] = dp[0]+abs(arr[1]-arr[0]);
+
+	for(int i = 2; i<n; i++){
+		dp[i] = min(dp[i-1]+abs(arr[i]-arr[i-1]),dp[i-2]+abs(arr[i]-arr[i-2]));
+	}
+	
+	return dp[n-1];
+}
+
 int main(){
-	int arr[] = {10,30,40,20};
+	int arr[] = {10,50,40,20};
 	int n = 4;
 	memset(dp,-1,sizeof(dp));
-	cout<<solve(arr,n-1);
+	cout<<bottomUp(arr,n);
 	return 0;
 }
