@@ -48,7 +48,7 @@ int main(){
 	int arr[] = {2,2,3,2,3};
 	int n = 5;
 	memset(dp,-1,sizeof(dp));
-	solve(arr,n-1);
+	// solve(arr,n-1);
 	//cout<<min(dp[n-1],min(dp[n-2],dp[n-3]));
 	bottomUp(arr,n);
 	cout<<min(dp[n-1],min(dp[n-2],dp[n-3]));
