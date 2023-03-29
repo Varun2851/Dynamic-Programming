@@ -12,7 +12,7 @@ int rodCutting(int n, int *prices) {
 	if (n == 0) return 0;
 
 	if (memo[n] != -1) return memo[n];
-
+ 
 	// O(n) extra work inside each state
 	int ans = 0;
 	for (int i = 1; i <= n; i++) {

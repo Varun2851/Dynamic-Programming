@@ -34,6 +34,7 @@ int main(){
 	int arr[] = {10,50,40,20};
 	int n = 4;
 	memset(dp,-1,sizeof(dp));
+	cout<<solve(arr,n-1);
 	cout<<bottomUp(arr,n);
 	return 0;
 }
