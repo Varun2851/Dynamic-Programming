@@ -21,7 +21,7 @@ int colorfulKnapsack(int *weight,int *color,int n,int m,int capacity){
 	//iterate for color from 1 to m
 	for(int i = 1; i<=m; i++){
 		//to check whether we can use the ith color or not
-		bool exists = false;
+		//bool exists = false;
 		for(int j = 0; j<=capacity; j++){
 			//traverse through all weight of ith color
 			for(auto wt:colorweight[i]){
@@ -30,9 +30,9 @@ int colorfulKnapsack(int *weight,int *color,int n,int m,int capacity){
 				}
 			}
 
-			if(dp[i][j]){
-				exists = true;
-		    }
+			// if(dp[i][j]){
+			// 	exists = true;
+		    // }
 		}
 	}
 
